@@ -6,6 +6,7 @@
         FILTER_VALIDATE_FLOAT);
     $years = filter_input(INPUT_POST, 'years',
         FILTER_VALIDATE_INT);
+    $date = date('d-m-Y');
 
     // validate investment
     if ($investment === FALSE ) {
@@ -69,6 +70,12 @@
 
         <label>Future Value:</label>
         <span><?php echo $future_value_f; ?></span><br>
-    </main>
+          
+   </main>
 </body>
+<footer>
+   <div>
+      <span><?php echo "This calculation was done on $date." ?></span><br>
+   </div>
+</footer>
 </html>
